@@ -8,7 +8,7 @@ stages{
             sh 'java -version'
             echo "get working directory"
             sh 'pwd'
-            sh 'docker images'
+            sh 'whoami'
         }
     }
 }
