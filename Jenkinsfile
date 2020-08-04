@@ -13,7 +13,7 @@ stages{
            
             steps {
                  script {
-                     sh '''
+                    
                 docker.withRegistry( 'registry', registryCredential ) {
                  'docker build . -t customdocker1'
                                 }
@@ -22,7 +22,7 @@ stages{
                     docker ps
                    node --version
                    java version
-                   '''
+                 
                  }
             }
            // post { always { cleanWs() } }
