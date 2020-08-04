@@ -13,10 +13,11 @@ stages{
            
             steps {
                  script {
-                    
-              sh  'docker.withRegistry( 'registry', registryCredential )' {
-                 sh 'docker build . -t customdocker1'
-                                }
+                     
+                      withDockerRegistry([ credentialsId: "dockerhub", url: "https://registry.hub.docker.com" ]) {
+          sh 'docker build . -t customdocker1'  
+                      }           
+                              
                   sh  'pwd'
                    sh 'whoami'
                     sh 'docker ps'
