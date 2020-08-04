@@ -14,7 +14,7 @@ stages{
             steps {
                  script {
                     
-                docker.withRegistry( 'registry', registryCredential ) {
+              sh  'docker.withRegistry( 'registry', registryCredential )' {
                  sh 'docker build . -t customdocker1'
                                 }
                   sh  'pwd'
