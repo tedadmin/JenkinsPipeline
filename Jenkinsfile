@@ -1,6 +1,8 @@
 
 pipeline{
-    agent { dockerfile true }
+    agent { 
+        docker { image 'jmuringoly/ted:0.5' }
+    }
 stages{
     	stage('Docker Image') {
            
