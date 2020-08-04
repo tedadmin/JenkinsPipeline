@@ -1,2 +1,2 @@
 FROM jmuringoly/ted:0.5
-RUN java version
+RUN apt-get update && apt-get install -y git
