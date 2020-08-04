@@ -9,6 +9,7 @@ stages{
             steps {
                  script {
             sh 'pwd'
+                     sh 'docker ps'
                      sh 'docker pull ted:1.0'
            sh 'docker build . -t customdocker1'
         //    def containerID = sh 'docker ps --filter ancestor=docker_node_ubuntu --format "{{.ID}}"'
