@@ -1,8 +1,8 @@
 
 pipeline{
     agent { 
-        docker { image 'jmuringoly/ted:0.5' }
-    }
+        dockerfile true
+            }
 stages{
     	stage('Docker Image') {
            
@@ -17,7 +17,7 @@ stages{
                    sh 'java version'
                  }
             }
-            post { always { cleanWs() } }
+           // post { always { cleanWs() } }
         }
     }
     }
