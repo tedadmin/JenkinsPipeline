@@ -1,8 +1,8 @@
 
 pipeline{
-    agent { 
+    agent { Docker {
        file '/Dockerfile'
-       image 'jmuringoly/ted:0.5'
+        image 'jmuringoly/ted:0.5'}
     }
 stages{
   
