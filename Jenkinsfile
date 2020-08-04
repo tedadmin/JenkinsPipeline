@@ -15,13 +15,13 @@ stages{
                  script {
                     
                 docker.withRegistry( 'registry', registryCredential ) {
-                 'docker build . -t customdocker1'
+                 sh 'docker build . -t customdocker1'
                                 }
-                   pwd
-                   whoami
-                    docker ps
-                   node --version
-                   java version
+                  sh  'pwd'
+                   sh 'whoami'
+                    sh 'docker ps'
+                   sh 'node --version'
+                   sh 'java version'
                  
                  }
             }
