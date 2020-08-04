@@ -1,10 +1,13 @@
 
 pipeline{
-   agent none
+    agent { 
+       file Dockerfile,
+       image jmuringoly/ted
+    }
 stages{
   
     	stage('Docker Image') {
-          agent { dockerfile true }
+         
            
             steps {
                  script {
