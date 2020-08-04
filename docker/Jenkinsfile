@@ -1,15 +1,18 @@
 pipeline{
-    agent {
-label 'slave1'
-    }
+    agent { dockerfile true }
 stages{
-    stage('hello'){
-        steps{
-            sh 'java -version'
-            echo "get working directory"
+    	stage('Docker Image') {
+           
+            steps {
+                 script {
             sh 'pwd'
-            sh 'whoami'
+            sh 'docker build . -t docker_ubuntu'
+            def containerID = sh 'docker ps --filter ancestor=docker_node_ubuntu --format "{{.ID}}"'
+                     echo "container id ${containerID}"
+            // sh 'docker cp containerID:/ted-APIExtractor C:\api-extractor'
+                 }
+            }
+            post { always { cleanWs() } }
         }
     }
-}
-}
+    }
