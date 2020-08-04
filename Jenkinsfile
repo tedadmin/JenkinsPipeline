@@ -8,6 +8,7 @@ stages{
            
             steps {
                  script {
+                     sh 'docker.withRegistry('https://registry.hub.docker.com','dockerhub')'
             sh 'pwd'
                      sh 'whoami'
                      sh 'docker ps'
