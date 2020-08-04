@@ -4,7 +4,7 @@ pipeline{
 stages{
   
     	stage('Docker Image') {
-          agent { Dockerfile true }
+          agent { dockerfile true }
            
             steps {
                  script {
