@@ -9,6 +9,7 @@ stages{
             steps {
                  script {
             sh 'pwd'
+                     sh 'whoami'
                      sh 'docker ps'
                      sh 'docker pull ted:1.0'
            sh 'docker build . -t customdocker1'
