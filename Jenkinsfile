@@ -11,9 +11,7 @@ stages{
     	stage('Docker Image') {
          
            
-            steps {
-                 script {
-                     
+            steps {           
                       withDockerRegistry([ credentialsId: "dockerhub", url: "https://registry.hub.docker.com" ]) {
           sh 'docker build . -t customdocker1'  
                       }           
@@ -23,8 +21,6 @@ stages{
                     sh 'docker ps'
                    sh 'node --version'
                    sh 'java version'
-                 
-                 }
             }
            // post { always { cleanWs() } }
         }
