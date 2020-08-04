@@ -1,6 +1,6 @@
 
 pipeline{
-    agent { Docker {
+    agent { docker {
        file '/Dockerfile'
         image 'jmuringoly/ted:0.5'}
     }
