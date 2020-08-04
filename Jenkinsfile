@@ -1,26 +1,14 @@
 
 pipeline{
-    environment {
-registry = "https://registry.hub.docker.com"
-registryCredential = 'dockerhub'
-//dockerImage = ''
-}
     agent any
 stages{
-  
-    	stage('Docker Image') {
-         
-           
-            steps {           
-                      withDockerRegistry([ credentialsId: "dockerhub", url: "https://registry.hub.docker.com" ]) {
-          sh 'docker build . -t customdocker1'  
-                      }           
-                              
-                  sh  'pwd'
-                   sh 'whoami'
-                    sh 'docker ps'
-                   sh 'node --version'
-                   sh 'java version'
+    	stage('Docker Image') {        
+            steps {                  
+                 withDockerRegistry([ credentialsId: "dockerhub", url: "https://registry.hub.docker.com" ]) {
+          sh 'docker ps'
+                     sh 'docker build . -t customdocker1'  
+         // sh 'docker push qliktech-docker-snapshot.jfrog.io/qsm-build-env:latest'
+        }
             }
            // post { always { cleanWs() } }
         }
