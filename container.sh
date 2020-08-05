@@ -8,7 +8,7 @@ ls
 docker ps -a
 echo "my container id is ${conatinerId}"
 docker start ${conatinerId}
-docker exec -i ${conatinerId} bin/bash
+docker exec -it ${conatinerId} bin/bash
 ls
 aws --version
 node --version
