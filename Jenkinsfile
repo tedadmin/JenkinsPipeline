@@ -5,9 +5,10 @@ stages{
     	stage('Docker Image') {        
             steps {                  
                //  withDockerRegistry([ credentialsId: "dockerhub", url: "https://registry.hub.docker.com" ]) 
+                sh 'whoami'
                 
           sh 'docker ps'
-                     sh 'docker build . -t customdocker1 --no-cache'
+                     sh 'docker build . -t customdocker1'
                 sh 'ls -ltr'
                
                 sh 'docker run  customdocker1'
