@@ -15,7 +15,7 @@ stages{
                 sh 'docker run  customdocker'
                 sh 'docker ps'
                 sh 'ls'
-                sh 'docker exec -it "${ContainerID}" bash'
+                sh 'docker exec -it "${docker ps -aqf "name=customdocker"}" bash'
                  sh 'aws --version'
                 sh 'node --version'
          // sh 'docker push qliktech-docker-snapshot.jfrog.io/qsm-build-env:latest'
