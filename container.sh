@@ -9,3 +9,4 @@ echo "my container id is ${conatinerId}"
 docker exec -it customdocker:1.0 bash
 aws --version
 node --version
+exec "$@";
