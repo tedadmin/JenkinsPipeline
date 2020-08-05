@@ -1,6 +1,6 @@
 docker ps
 docker build . -t customdocker
-conatinerId=$(docker ps -aqf "name=customdocker") > containerid.txt
+conatinerId=$(docker ps -aqf "name=customdocker")
 ls -ltr               
 docker run  "customdocker"
 docker ps
