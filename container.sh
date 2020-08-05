@@ -9,6 +9,6 @@ docker ps -a
 echo "my container id is ${conatinerId}"
 docker start ${conatinerId}
 docker exec -i ${conatinerId} bash
-aws --version
-node --version
+//aws --version
+//node --version
 
