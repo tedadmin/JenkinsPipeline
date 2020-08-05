@@ -10,4 +10,4 @@ echo "my container id is ${conatinerId}"
 docker exec -i ${conatinerId} bash
 aws --version
 node --version
-exec "$@";
+
