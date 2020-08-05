@@ -8,6 +8,7 @@ stages{
                 sh 'whoami'
                 
           sh 'docker ps'
+                sh 'bash container.sh'
               //       sh 'docker build . -t customdocker'
              //   sh 'docker ps -aqf "name=customdocker" > containerid.txt'
                // sh 'ls -ltr'
