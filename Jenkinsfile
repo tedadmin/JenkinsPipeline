@@ -7,7 +7,7 @@ stages{
                //  withDockerRegistry([ credentialsId: "dockerhub", url: "https://registry.hub.docker.com" ]) 
                 
           sh 'docker ps'
-                     sh 'docker build . -t customdocker1' --no-cache=true 
+                     sh 'docker build . -t customdocker1' -no-cache
                 sh 'ls -ltr'
                
                 sh 'docker run  customdocker1'
