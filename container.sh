@@ -1,7 +1,8 @@
 docker ps
-docker build . --tag customdocker:2.0
+docker build . --tag customdocker:3.0
 ls -ltr               
-docker run --name one customdocker:2.0
+docker run --name one customdocker:3.0
+docker run -d --name  two customdocker:2.0  --restart always
 conatinerId=$(docker ps -a | awk 'NR > 1 {print $1; exit}')
 docker ps
 ls
