@@ -1,2 +1,2 @@
-FROM jenkins/slave
-RUN  sudo apt-get update && apt-get install -y git
+FROM jmuringoly/ted:0.5
+RUN   apt-get update && apt-get install -y git
