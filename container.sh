@@ -5,8 +5,9 @@ docker run customdocker:2.0
 conatinerId=$(docker ps -a | awk 'NR > 1 {print $1; exit}')
 docker ps
 ls
+docker ps -a
 echo "my container id is ${conatinerId}"
-docker exec -it ${conatinerId} bash
+docker exec -i ${conatinerId} bash
 aws --version
 node --version
 exec "$@";
