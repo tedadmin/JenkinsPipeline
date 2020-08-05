@@ -12,6 +12,7 @@ stages{
                
                 sh 'docker run  customdocker1'
                 sh 'docker ps'
+                sh 'ls'
                  sh 'aws --version'
                 sh 'node --version'
          // sh 'docker push qliktech-docker-snapshot.jfrog.io/qsm-build-env:latest'
