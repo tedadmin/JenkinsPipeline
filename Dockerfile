@@ -1,2 +1,2 @@
-FROM ubuntu:20.04
+FROM jenkins/slave
 RUN apt-get update && apt-get install -y git
