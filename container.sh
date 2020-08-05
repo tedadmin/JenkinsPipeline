@@ -5,7 +5,7 @@ ls -ltr
 docker run  "customdocker"
 docker ps
 ls
-echo "$conatinerId"
+echo " my container id is $conatinerId"
 docker exec -it sh -c "$conatinerId" bash
 aws --version
 node --version
