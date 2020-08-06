@@ -1,7 +1,6 @@
 FROM jmuringoly/ted:0.5
-RUN   apt-get update && apt-get install -y git vim 
-RUN   apt-get update && apt-get install -y curl
-//ENTRYPOINT ["bash","/container.sh"]
-//ENTRYPOINT ["/container.sh"]
-CMD sleep 10
+WORKDIR /home/
+COPY container.sh .
+ENTRYPOINT ["bash","container.sh"]
+
 
